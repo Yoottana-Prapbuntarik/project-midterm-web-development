@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    list-style: none;
 }
 .container{
     max-width: 1230px;
@@ -27,27 +26,42 @@
     display: grid;
     grid-template-columns:repeat(3,1fr) ;
     justify-items: center;
+    margin-bottom: 56px;
+
 }
 .nav-grid ul{
     display: grid;
     margin-top: 69px;
-    margin-bottom: 56px;
+    list-style: none;
     grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
 }
 .nav-grid .logo{
-margin-top: 58px;
-margin-bottom: 52px;
-font-size: 50px;
+    margin-top:69px;
+    font-size: 50px;
+}
+.nav-grid ul li{
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+    transition: 1s ease-in-out;
 }
 .hireme {
+    height: 40px;
     font-size: 20px;
-    margin-top: 69px;
-    margin-bottom: 56px;
+    margin-top:69px;
     text-transform: uppercase;
-    border-bottom: 1px solid #fff;
+    transition: 1s ease-in-out;
 }
 
-
+/* Hover menu nav*/
+.hireme:hover{
+    border-bottom: 1px solid #fff;
+    
+}
+.nav-grid ul li:hover{
+    border-bottom: 1px solid #fff;
+}
 
 /* Content Header Grid */
 .content-header-gird{
@@ -57,9 +71,11 @@ font-size: 50px;
 }
 .content-header-item:nth-child(1) h1 {
     font-size: 72px;
-
 } 
-
+.button-header-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
 input.let-talk{
     background: #fff;
     border: none;
@@ -74,7 +90,6 @@ input.my-port{
     outline: none;
     color: #fff;   
     background: none; 
-    margin-left: 18px;
     width: 120px;
     height: 60px;
     margin-top: 42px;
@@ -96,19 +111,918 @@ input.my-port{
 .about-me-item a{
     text-decoration: none;
 }
-.about-me-item a .fa{
+.about-me-item a .fa {
     display: flex;
     justify-content: center;
     color: #fff;
-
-    
+    margin-top: 50%;
+    transform: translateY(-50%);
 }
-.box-contact-grid{
+.about-me-item h1{
+    position: relative;
+    font-size: 104px;
+    color: #e9e9e9;
+    z-index: -200;
+}
+.about-me-item .who-i-am h5{
+    position: relative;
+    top: -55px;
+    font-size: 30px;
+    color: #1e00f7;
+}
+.about-me-item .who-i-am p{
+    font-size: 25px;
+    color: #000;
+    margin-top: 20px;
+}
+.about-me-item .what-i-do h5{
+    margin-top: 148px;
+    font-size: 30px;
+    color: #1e00f7;
+    margin-bottom: 40px;
+}
+.about-me-item .what-i-do span{
+    font-size: 25px;
+    color: #000;
+}
+.about-me-item .what-i-do li {
+    list-style: square;
+    font-size: 25px;
+    color: #1e00f7;
+    margin-bottom: 40px;
+}
+.about-me-item .what-i-do input {
+    border: none;
+    width: 300px;
+    height: 73px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #1e00f7;
+    margin-top: 18px;
+}
+.box-contact-grid {
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    position: relative;
+    top: -3%;
+    left: 50%;
+    transform: translateX(-47%);
 }
 .box-contact-item{
     width: 82px;
-    height: 92px;
+    height: 82px;
     background: #1e00f7;
+}
+
+/* Semi-footer-gird */
+.semi-footer{
+    width: 100%;
+    height: 630px;
+    background-color: #1e00f7;
+}
+.semi-footer .container h5{
+    color: #ffffff;
+    font-size: 28px;
+    padding-top: 90px;
+    padding-bottom: 70px;
+}
+.semi-footer-grid{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+}
+.semi-footer-item {
+    padding-bottom: 224px;
+    text-align: center;
+}
+.input-grid:nth-child(1){
+    display: grid;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.input-grid:nth-child(1) input{
+    width: 260px;
+    height: 40px;
+    background: none; 
+    border: none;   
+    outline: none;
+    border-bottom:1px solid #fff ;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+.input-grid:nth-child(1) input::placeholder{
+ color: #fff;
+}
+
+.input-grid:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.input-grid:nth-child(2) input{
+    width: 630px;
+    height: 40px;
+    background: none; 
+    border: none;   
+    outline: none;
+    border-bottom:1px solid #fff ;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+.input-grid:nth-child(2) input[type="button"]{
+    width: 230px;
+    height: 70px;
+    background: #fff; 
+    border: none;   
+    outline: none;
+    padding: 10px;
+    margin-bottom: 50px;
+    color: #1e00f7;
+}
+.input-grid:nth-child(2) input::placeholder{
+ color: #fff;
+}
+.semi-footer-item:nth-child(2) p{
+    font-size: 18px;
+    padding-bottom: 25px;
+    color: #fff;
+}
+.social{
+    margin-top: 30px;
+}
+.social-grid{
+    width: 30%;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    margin: 0 auto;   
+}
+/* social fa */
+.social-item a .fa{
+    color: #fff;
+}
+.container-footer{
+    width: 1220px;
+    height: 100%;
+    margin:0 auto;
+}
+footer{
+    width: 100%;
+    height: 150px;  
+    background-color: #fff;
+}
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100%;
+    justify-content: center;
+}
+.footer-item:nth-child(1){
+    align-self: center;
+    
+    text-align: center;    
+}
+.footer-item:nth-child(2){
+    align-self: center;
+    justify-items: center;
+    text-align: center;
+    
+}
+.footer-item:nth-child(1) .logo{
+    color: #1e00f7;
+    font-size: 40px;
+}
+.footer-quick-link-grid ul{
+    display: grid;
+    width: 300px;
+    grid-gap: 1px;
+    grid-template-columns: repeat(3,1fr);
+}
+.footer-quick-link-grid {
+    display: flex;
+    justify-content: center;
+    position: relative;
+   
+}
+.footer-quick-link-grid ul li ,a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* Media Query Screen */
+
+@media only screen and (max-width: 1199.98px) {
+    .nav-grid {
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin-bottom: 56px;
+    }
+    .nav-grid ul {
+        margin-top: 69px;
+        list-style: none;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+
+    .content-header-gird {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1rem;
+    }
+    .button-header-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    input.let-talk {
+        background: #fff;
+        border: none;
+        outline: none;
+        color: #1e00f7;
+        position: relative;
+        width: 50%;
+        height: 60px;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+    }
+    input.my-port {
+        border: none;
+        outline: none;
+        color: #fff;
+        background: none;
+        position: relative;
+        width: 50%;
+        height: 60px;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        margin-bottom: 20px;
+        border-bottom: 1px solid #fff;
+    } 
+    .content-header-item:nth-child(1) h1 {
+        font-size:18px;
+        word-wrap: break-word;
+    }
+    
+    .content-header-item img {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+    .about-me-grid {
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .about-me-item:nth-child(1) img{
+        width: 90%;
+        display: block;
+        margin: 12px auto;
+    }
+    .box-contact-item {
+        width: 50%;
+        height: 95px;
+        background: #1e00f7;
+        display: block;
+        margin: 0 auto;
+    }
+    .box-contact-grid {
+        position: relative;
+        top: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .about-me-item h1 {
+        position: relative;
+        font-size: 80px;
+        color: #e9e9e9;
+        z-index: -200;
+    }
+    .about-me-item{
+        padding: 10px;
+    }
+    .about-me-item .who-i-am p{
+        font-size: 19px;
+        color: #000;
+        margin-top: 20px;
+    }
+    .about-me-item .what-i-do span {
+        font-size: 19px;
+        color: #000;
+    }
+    .semi-footer-grid {
+        grid-gap: 1px;
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .semi-footer {
+        width: 100%;
+        height: auto;
+        background-color: #1e00f7;
+    }
+    .input-grid:nth-child(1) {
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .input-grid:nth-child(2) {
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .semi-footer-item {
+        padding-bottom:50px;
+        text-align: center;
+    }
+    .input-grid:nth-child(2) input[type="button"] {
+        width: 71%;
+        height: 70px;
+        background: #fff;
+        border: none;
+        outline: none;
+        padding: 10px;
+        margin-bottom: 50px;
+        color: #1e00f7;
+    }
+    .input-grid:nth-child(2) input {
+        width: 100%;
+        height: 40px;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #fff;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    .input-grid:nth-child(1) input {
+        width: 100%;
+        height: 40px;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #fff;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    .about-me-item .what-i-do input {
+        border: none;
+        width: 100%;
+        height: 73px;
+        font-size: 20px;
+        color: #fff;
+        background-color: #1e00f7;
+        margin-top: 18px;
+    }
+    .footer-grid {
+        display:grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        justify-content: center;
+    }
+    .container{
+        width: 100% !important;
+    }
+    .container-footer {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 991.98px) {
+    .nav-grid {
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin-bottom: 56px;
+    }
+    .nav-grid ul {
+        margin-top: 69px;
+        list-style: none;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+
+    .content-header-gird {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1rem;
+    }
+    .button-header-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    input.let-talk {
+        background: #fff;
+        border: none;
+        outline: none;
+        color: #1e00f7;
+        position: relative;
+        width: 50%;
+        height: 60px;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+    }
+    input.my-port {
+        border: none;
+        outline: none;
+        color: #fff;
+        background: none;
+        position: relative;
+        width: 50%;
+        height: 60px;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        margin-bottom: 20px;
+        border-bottom: 1px solid #fff;
+    } 
+    .content-header-item:nth-child(1) h1 {
+        font-size:18px;
+        word-wrap: break-word;
+    }
+    
+    .content-header-item img {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+    .about-me-grid {
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .about-me-item:nth-child(1) img{
+        width: 90%;
+        display: block;
+        margin: 12px auto;
+    }
+    .box-contact-item {
+        width: 50%;
+        height: 95px;
+        background: #1e00f7;
+        display: block;
+        margin: 0 auto;
+    }
+    .box-contact-grid {
+        position: relative;
+        top: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .about-me-item h1 {
+        position: relative;
+        font-size: 80px;
+        color: #e9e9e9;
+        z-index: -200;
+    }
+    .about-me-item{
+        padding: 10px;
+    }
+    .about-me-item .who-i-am p{
+        font-size: 19px;
+        color: #000;
+        margin-top: 20px;
+    }
+    .about-me-item .what-i-do span {
+        font-size: 19px;
+        color: #000;
+    }
+    .semi-footer-grid {
+        grid-gap: 1px;
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .semi-footer {
+        width: 100%;
+        height: auto;
+        background-color: #1e00f7;
+    }
+    .input-grid:nth-child(1) {
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .input-grid:nth-child(2) {
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .semi-footer-item {
+        padding-bottom:50px;
+        text-align: center;
+    }
+    .input-grid:nth-child(2) input[type="button"] {
+        width: 71%;
+        height: 70px;
+        background: #fff;
+        border: none;
+        outline: none;
+        padding: 10px;
+        margin-bottom: 50px;
+        color: #1e00f7;
+    }
+    .input-grid:nth-child(2) input {
+        width: 100%;
+        height: 40px;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #fff;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    .input-grid:nth-child(1) input {
+        width: 100%;
+        height: 40px;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #fff;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    .about-me-item .what-i-do input {
+        border: none;
+        width: 100%;
+        height: 73px;
+        font-size: 20px;
+        color: #fff;
+        background-color: #1e00f7;
+        margin-top: 18px;
+    }
+    .footer-grid {
+        display:grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        justify-content: center;
+    }
+    .container{
+        width: 100% !important;
+    }
+    .container-footer {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 767.98px) {
+    .nav-grid {
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin-bottom: 56px;
+    }
+    .nav-grid ul {
+        margin-top: 69px;
+        list-style: none;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .content-header-gird {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .button-header-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    input.let-talk {
+        background: #fff;
+        border: none;
+        outline: none;
+        color: #1e00f7;
+        position: relative;
+        width: 50%;
+        height: 60px;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+    }
+    input.my-port {
+        border: none;
+        outline: none;
+        color: #fff;
+        background: none;
+        position: relative;
+        width: 50%;
+        height: 60px;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        margin-bottom: 20px;
+        border-bottom: 1px solid #fff;
+    } 
+    .content-header-item:nth-child(1) h1 {
+        font-size:18px;
+        word-wrap: break-word;
+    }
+    
+    .content-header-item img {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+    .about-me-grid {
+        grid-gap: 1rem;
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+    .about-me-item:nth-child(1) img{
+        width: 90%;
+        display: block;
+        margin: 12px auto;
+    }
+    .box-contact-item {
+        width: 50%;
+        height: 95px;
+        background: #1e00f7;
+        display: block;
+        margin: 0 auto;
+    }
+    .box-contact-grid {
+        position: relative;
+        top: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .about-me-item h1 {
+        position: relative;
+        font-size: 80px;
+        color: #e9e9e9;
+        z-index: -200;
+    }
+    .about-me-item{
+        padding: 10px;
+    }
+    .about-me-item .who-i-am p{
+        font-size: 19px;
+        color: #000;
+        margin-top: 20px;
+    }
+    .about-me-item .what-i-do span {
+        font-size: 19px;
+        color: #000;
+    }
+    .semi-footer-grid {
+        grid-gap: 1px;
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .semi-footer {
+        width: 100%;
+        height: auto;
+        background-color: #1e00f7;
+    }
+    .input-grid:nth-child(1) {
+        grid-gap: 1rem;
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+    .input-grid:nth-child(2) {
+        grid-gap: 1rem;
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+
+    .input-grid:nth-child(2) input[type="button"] {
+        width: 71%;
+        height: 70px;
+        background: #fff;
+        border: none;
+        outline: none;
+        padding: 10px;
+        margin-bottom: 50px;
+        color: #1e00f7;
+    }
+    .input-grid:nth-child(2) input {
+        width: 100%;
+        height: 40px;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #fff;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    .input-grid:nth-child(1) input {
+        width: 100%;
+        height: 40px;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #fff;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    .about-me-item .what-i-do input {
+        border: none;
+        width: 100%;
+        height: 73px;
+        font-size: 20px;
+        color: #fff;
+        background-color: #1e00f7;
+        margin-top: 18px;
+    }
+    .footer-grid {
+        display:grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        justify-content: center;
+    }
+    .container{
+        width: 100% !important;
+    }
+    .container-footer {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 575.98px) {
+    .nav-grid {
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin-bottom: 56px;
+    }
+    .nav-grid ul {
+        margin-top: 69px;
+        list-style: none;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .content-header-gird {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .button-header-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    input.let-talk {
+        background: #fff;
+        border: none;
+        outline: none;
+        color: #1e00f7;
+        position: relative;
+        width: 50%;
+        height: 60px;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+    }
+    input.my-port {
+        border: none;
+        outline: none;
+        color: #fff;
+        background: none;
+        position: relative;
+        width: 50%;
+        height: 60px;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        margin-bottom: 20px;
+        border-bottom: 1px solid #fff;
+    } 
+    .content-header-item:nth-child(1) h1 {
+        font-size:18px;
+        word-wrap: break-word;
+    }
+    
+    .content-header-item img {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+    .about-me-grid {
+        grid-gap: 1rem;
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+    .about-me-item:nth-child(1) img{
+        width: 90%;
+        display: block;
+        margin: 12px auto;
+    }
+    .box-contact-item {
+        width: 50%;
+        height: 55px;
+        background: #1e00f7;
+        display: block;
+        margin: 0 auto;
+    }
+    .box-contact-grid {
+        position: relative;
+        top: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .about-me-item h1 {
+        position: relative;
+        font-size: 80px;
+        color: #e9e9e9;
+        z-index: -200;
+    }
+    .about-me-item{
+        padding: 10px;
+    }
+    .about-me-item .who-i-am p{
+        font-size: 19px;
+        color: #000;
+        margin-top: 20px;
+    }
+    .about-me-item .what-i-do span {
+        font-size: 19px;
+        color: #000;
+    }
+    .semi-footer-grid {
+        grid-gap: 1px;
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .semi-footer {
+        width: 100%;
+        height: auto;
+        background-color: #1e00f7;
+    }
+    .input-grid:nth-child(1) {
+        grid-gap: 1rem;
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+    .input-grid:nth-child(2) {
+        grid-gap: 1rem;
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+
+    .input-grid:nth-child(2) input[type="button"] {
+        width: 71%;
+        height: 70px;
+        background: #fff;
+        border: none;
+        outline: none;
+        padding: 10px;
+        margin-bottom: 50px;
+        color: #1e00f7;
+    }
+    .input-grid:nth-child(2) input {
+        width: 83%;
+        height: 40px;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #fff;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    .input-grid:nth-child(1) input {
+        width: 83%;
+        height: 40px;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #fff;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    .about-me-item .what-i-do input {
+        border: none;
+        width: 100%;
+        height: 73px;
+        font-size: 20px;
+        color: #fff;
+        background-color: #1e00f7;
+        margin-top: 18px;
+    }
+    .footer-grid {
+        display:grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        justify-content: center;
+    }
+    .container{
+        width: 100% !important;
+    }
+    .container-footer {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
 }
