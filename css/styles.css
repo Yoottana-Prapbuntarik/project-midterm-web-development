@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+.container{
+    max-width: 1230px;
+    width: 100%;
+    margin:0 auto;
+}
+.bg-header{
+    content: '';
+    background-image: url('../img/bg-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.content-header-item h1{
+    color: #fff;
+}
+.nav-grid li a,.logo,.logo,.hireme a{
+    text-decoration: none;
+    color: #fff;
+}
+.nav-grid{
+    display: grid;
+    grid-template-columns:repeat(3,1fr) ;
+    justify-items: center;
+}
+.nav-grid ul{
+    display: grid;
+    margin-top: 69px;
+    margin-bottom: 56px;
+    grid-template-columns: repeat(3,1fr);
+}
+.nav-grid .logo{
+margin-top: 58px;
+margin-bottom: 52px;
+font-size: 50px;
+}
+.hireme {
+    font-size: 20px;
+    margin-top: 69px;
+    margin-bottom: 56px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #fff;
+}
+
+
+
+/* Content Header Grid */
+.content-header-gird{
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.content-header-item:nth-child(1) h1 {
+    font-size: 72px;
+
+} 
+
+input.let-talk{
+    background: #fff;
+    border: none;
+    outline: none;
+    color: #1e00f7;    
+    width: 207px;
+    height: 60px;
+    margin-top: 42px;
+}
+input.my-port{
+    border: none;
+    outline: none;
+    color: #fff;   
+    background: none; 
+    margin-left: 18px;
+    width: 120px;
+    height: 60px;
+    margin-top: 42px;
+    border-bottom: 1px solid #fff;
+}
+.arrow-down {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 63px 0px;
+}
+
+/* about-me */
+.about-me-grid{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns:repeat(2,1fr);
+}
+.about-me-item a{
+    text-decoration: none;
+}
+.about-me-item a .fa{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+
+    
+}
+.box-contact-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.box-contact-item{
+    width: 82px;
+    height: 92px;
+    background: #1e00f7;
+}
